@@ -1,0 +1,390 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Bahnschrift SemiCondensed", Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #3e405c;
+  color: #ffffff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  max-width: 100%;
+  max-height: 30vh;
+  width: 20%;
+  height: auto;
+}
+
+.project-name {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  text-align: right;
+}
+
+.project-name h1 {
+  font-family: "Georgia", sans-serif;
+  font-size: 36px;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222222;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #aa1b9e;
+  color: #ffffff;
+}
+
+.swiffy-slider {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider-container li {
+  flex: 0 0 100%;
+}
+
+.slider-container img {
+  width: 100%;
+  max-height: 80vh;
+}
+
+.promo-text {
+  text-align: center;
+  margin: 5vh 5vh;
+}
+
+.promo-text p {
+  font-style: italic !important;
+  font-weight: normal !important;
+  line-height: 1.5 !important;
+  font-size: 5vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 0.5fr);
+  grid-template-rows: repeat(3, 0.7fr);
+  gap: 5px;
+  margin: 20px 0 0 0;
+}
+
+.image-grid div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-cell {
+  width: 100%;
+  overflow: hidden;
+}
+
+.grid-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #3e405c;
+  color: #ffffff;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-column {
+  width: 30%;
+  text-align: center;
+}
+
+.footer-column a {
+  display: block;
+  align-items: center;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer-column a i {
+  font-size: 24px;
+}
+
+.footer-column a:last-child {
+  margin-bottom: 0;
+}
+
+main {
+  display: flex;
+}
+
+
+
+/* Estilo pagina nosotros */
+
+.team-main {
+  display: flex;
+  flex-direction: column; /* Cambiamos la dirección a columna */
+}
+
+.teamtext-container {
+  font-size: 90%;
+  text-align: left;
+  margin: 0 20%;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas con igual ancho */
+  grid-template-rows: repeat(3, auto); /* Tres filas con altura automática */
+  gap: 10px; /* Espacio entre las celdas */
+  margin: 10vh 10vh; /* Espacio superior para separar del contenido anterior */
+}
+
+.team-grid-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center; /* Centra el texto */
+  font-size: 100%;
+}
+
+.team-grid-cell img {
+  width: 100%; /* La imagen ocupa todo el ancho de su celda */
+}
+
+/* estilo de pagina de precios */
+
+.main-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+}
+
+.product-card img {
+  width: 100%;
+}
+
+.product-card p {
+  margin: 5px 0;
+}
+
+.product-card a {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.product-card a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para contactos */
+.main-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.contact-form {
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.contact-form h2 {
+  margin-bottom: 10px;
+}
+
+.map {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.map h2 {
+  margin-bottom: 10px;
+}
+
+/* Estilos para el formulario */
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para tablets y dispositivos similares pagina index*/
+@media (max-width: 1023px) and (min-width: 975px) {
+  header {
+    padding: 10px; /* Ajusta el relleno del encabezado para tablets */
+  }
+
+  .project-name {
+    width: 100%; /* Ajusta el ancho del nombre del proyecto */
+    text-align: center; /* Centra el texto del nombre del proyecto */
+  }
+
+  nav a {
+    padding: 10px; /* Ajusta el relleno de los enlaces de navegación */
+  }
+
+  .swiffy-slider {
+    margin: 0; /* Ajusta el margen del slider */
+  }
+
+  .promo-text {
+    margin: 2vh 10vh; /* Ajusta el margen del texto promocional */
+  }
+
+  .image-grid div img {
+    width: 100%; /* Ajusta el ancho de las imágenes en la cuadrícula */
+    height: 90%; /* Ajusta la altura de las imágenes en la cuadrícula */
+    object-fit: cover; /* Mantiene la relación de aspecto y cubre el espacio */
+  }
+
+  .container {
+    margin: 0 10px; /* Ajusta el margen de los elementos en el contenedor */
+  }
+}
+
+@media (max-width: 976px) and (min-width: 686px) {
+  .promo-text p {
+    font-size: 100%;
+  }
+
+  .main-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+}
+}
+
+@media (max-width: 685px) {
+  .logo-container {
+    display: none;
+  }
+
+  .promo-text p {
+    font-size: 100%;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1, auto); /* Tres filas con altura automática */
+    margin: 10vh 10vh; /* Espacio superior para separar del contenido anterior */
+  }
+
+  .main-contact {
+    grid-template-columns: 1fr;
+  }
+
+}
