@@ -1,6 +1,6 @@
 body {
-  margin: 0;
-  padding: 0;
+  margin-right: 0;
+  padding-right: 0 ;
   font-family: "Bahnschrift SemiCondensed", Arial, sans-serif;
 }
 
@@ -68,18 +68,49 @@ nav a:hover {
   margin: 0 auto;
 }
 
-.slider-container {
+.carrousel {
+  width: 94%;
+  max-width: 120cm;
+  padding: 3em;
+  overflow: hidden;
+}
+
+.carrousel .grande {
+  width: 300%;
   display: flex;
-  transition: transform 0.5s ease;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em;
+  transition: all .5s ease;
+  transform: translateX(0%);
 }
 
-.slider-container li {
-  flex: 0 0 100%;
+.carrousel .ing {
+  width: calc(100% / 3 - 3em);
+  min-height: 10vh;
 }
 
-.slider-container img {
+.carrousel .puntos {
   width: 100%;
-  max-height: 80vh;
+  padding: .4em;
+  margin: 1em 0 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrousel .punto {
+  width: 1em;
+  height: 1em;
+  margin: 0.5em;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.carrousel .punto.activo {
+  background-color: lightskyblue;
 }
 
 .promo-text {
