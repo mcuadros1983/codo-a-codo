@@ -51,4 +51,20 @@ function toggleMenu() {
   menuIcon.classList.toggle("active");
 }
 
+const grande = document.querySelector(".grande");
+const puntos = document.querySelectorAll(".punto");
 
+puntos.forEach((punto, i) => {
+  punto.addEventListener("click", () => {
+    let posicion = i;
+    let operacion = posicion * -33;
+
+    grande.style.transform = `translateX(${operacion}%)`;
+
+    puntos.forEach((punto, j) => {
+      punto.classList.remove("activo");
+    });
+
+    punto.classList.add("activo");
+  });
+});
