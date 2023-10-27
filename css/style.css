@@ -61,6 +61,7 @@ nav a:hover {
   color: #ffffff;
 }
 
+
 .swiffy-slider {
   position: relative;
   max-width: 100%;
@@ -68,49 +69,18 @@ nav a:hover {
   margin: 0 auto;
 }
 
-.carrousel {
-  width: 94%;
-  max-width: 120cm;
-  padding: 3em;
-  overflow: hidden;
-}
-
-.carrousel .grande {
-  width: 300%;
+.slider-container {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3em;
-  transition: all .5s ease;
-  transform: translateX(0%);
+  transition: transform 0.5s ease;
 }
 
-.carrousel .ing {
-  width: calc(100% / 3 - 3em);
-  min-height: 10vh;
+.slider-container li {
+  flex: 0 0 100%;
 }
 
-.carrousel .puntos {
+.slider-container img {
   width: 100%;
-  padding: .4em;
-  margin: 1em 0 0;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.carrousel .punto {
-  width: 1em;
-  height: 1em;
-  margin: 0.5em;
-  background-color: gray;
-  border-radius: 50%;
-}
-
-.carrousel .punto.activo {
-  background-color: lightskyblue;
+  max-height: 80vh;
 }
 
 .promo-text {
