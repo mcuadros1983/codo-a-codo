@@ -172,7 +172,7 @@ main {
 
 .teamtext-container {
   font-size: 90%;
-  text-align: left;
+  text-align: justify;
   margin: 0 20%;
 }
 
@@ -191,7 +191,7 @@ main {
   align-items: center; /* Centra horizontalmente */
   padding: 10px;
   border: 1px solid #ccc;
-  text-align: center; /* Centra el texto */
+  text-align: justify; /* Justifica el texto */
   font-size: 100%;
 }
 
@@ -279,6 +279,15 @@ main {
   margin-bottom: 5px;
 }
 
+/* Estilo para input de seleccion de GENERO Y PROVINCIA */
+.form-group option, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
 .form-group input,
 .form-group textarea {
   width: 100%;
