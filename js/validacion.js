@@ -6,20 +6,35 @@ function validarFormulario(event) {
   event.preventDefault(); // Prevenir el envío real del formulario
 
   // Obtener los valores de los campos
-  const nombreApellido = document.getElementById("nombreApellido").value;
+  const nombres = document.getElementById("nombres").value;
+  const apellidos = document.getElementById("apellidos").value;
   const dni = document.getElementById("dni").value;
+  const genero = document.getElementById("genero").value;
+  const provincia = document.getElementById("provincia").value;
   const email = document.getElementById("email").value;
   const telefono = document.getElementById("telefono").value;
   const mensaje = document.getElementById("mensaje").value;
 
   // Validar que todos los campos estén completos
-  if (!nombreApellido || !dni || !email || !telefono || !mensaje) {
+  if (!nombres || !apellidos || !dni || !genero|| !provincia|| !email || !telefono || !mensaje) {
     alert("Por favor, complete todos los campos del formulario.");
     return;
   }
 
-  // Validar Nombre y Apellido (solo letras y espacios)
-  if (!/^[A-Za-z\s]+$/.test(nombreApellido)) {
+  //VALIDACION DE ESPACIOS EN BLANCO EMAIL!
+  function email(input) {
+    var emailValue = input.value;
+    if (/\s/.test(emailValue)) {
+    document.getElementById("emailError").textContent = "El email no debe contener espacios en blanco.";
+    input.setCustomValidity("El email no debe contener espacios en blanco.");
+      } else {
+      document.getElementById("emailError").textContent = "";
+      input.setCustomValidity("");
+      }
+  
+
+  // Validar Apellidos (solo letras y espacios)
+  if (!/^[A-Za-z\s]+$/.test(apellidos)) {
     alert("Por favor, ingrese un Nombre y Apellido válidos.");
     return;
   }
@@ -45,7 +60,7 @@ function validarFormulario(event) {
 
   // Si todo está correcto, puedes proceder con el envío del formulario u otras acciones
   // Construir el cuerpo del mensaje
-  const cuerpoMensaje = `Nombre y Apellido: ${nombreApellido}\nCorreo electrónico: ${email}\nMensaje: ${mensaje}`;
+  const cuerpoMensaje = `Nombres: ${nombres}\nApellidos: ${apellidos}\nCorreo electrónico: ${email}\nMensaje: ${mensaje}`;
 
   // Enviar el correo usando Formspree
   var xhr = new XMLHttpRequest();
@@ -58,9 +73,14 @@ function validarFormulario(event) {
 
 function resetearCampos() {
   // Limpiar los campos estableciendo su valor como vacío
-  document.getElementById("nombreApellido").value = "";
+  document.getElementById("nombres").value = "";
+  document.getElementById("apellidos").value = "";
   document.getElementById("dni").value = "";
+  document.getElementById("genero").value = "";
+  document.getElementById("provincia").value = "";
   document.getElementById("email").value = "";
   document.getElementById("telefono").value = "";
   document.getElementById("mensaje").value = "";
+}
+
 }
