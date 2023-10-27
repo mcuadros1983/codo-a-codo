@@ -1,0 +1,22 @@
+[build]
+  # Directorio raíz de tu proyecto
+  base = "./"
+
+  # Comando de construcción
+  command = "echo 'No se requiere un comando de construcción'"
+
+  # Directorio de despliegue
+  publish = "./"
+
+[build.environment]
+  # Opcional: puedes configurar variables de entorno si es necesario
+
+[context.production]
+  # Configuración específica para el entorno de producción
+  command = "npm run build"  # Si usas un comando de construcción
+
+[context.deploy-preview]
+  # Configuración para despliegues de vista previa
+
+[context.branch-deploy]
+  # Configuración para despliegues de ramas de GitHub
